@@ -7,6 +7,7 @@ const hbs=require('hbs')
 
 
 const app=express()
+const port=process.env.PORT || 3000
 
 const pathfor=path.join(__dirname,'/html')
 const partialpath=path.join(__dirname,"/partials")
@@ -67,6 +68,6 @@ app.get('/weather', (req,res)=>{
    
  })
 
- app.listen(3000,()=>{
+ app.listen(port,()=>{
     console.log('printing')
  })
